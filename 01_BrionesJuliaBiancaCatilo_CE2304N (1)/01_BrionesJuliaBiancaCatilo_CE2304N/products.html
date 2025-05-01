@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="below.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <title>Product Page</title>
+</head>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #040c24;
+  background-blend-mode: normal;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position:relative;
+  padding-bottom: 58px;
+ 
+  display: flex;
+  flex-direction: column;
+  
+}
+.product {
+    position: relative;
+    width: 20vw;
+    height:auto;
+    margin: 20px;
+    overflow: hidden;
+    z-index:1;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-details {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.product:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product:hover .product-details {
+    transform: translateY(0);
+}
+
+.product-title {
+    margin: 0;
+    font-size: 1.2em;
+    text-align:center;
+}
+
+.product-description {
+    margin: 10px 0;
+    font-size: 0.9em;
+    text-align:center;
+}
+
+.product-price {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    text-align:center;
+}
+.container{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    z-index:1;
+}
+/* Hover animation*/
+       .animated-text {
+            display: inline-block;
+            font-size: 24px;
+            color: #0070c9;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .animated-text:hover {
+            color: #ff7e00; 
+        }
+/* Style for the footer container */
+
+
+    /* Style for each column in the footer */
+    .footer-column {
+      flex: 1;
+      padding: 20px;
+    }
+    h2.title{
+        text-align:center;
+        
+        color:white;
+    }
+
+    .add-to-cart-btn {
+    /* Style for the "Add to Cart" button */
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto; /* Center the button */
+}
+
+</style>
+<body>
+
+  <div class="header">
+ 
+       <a href="index.html"><button class="link" data-dropdown-button>Home</button></a>
+      
+
+    <a href="aboutus.html" class="link">About Us</a>
+    <a href="#" class="link">Our Products</a>
+    <a href="contactus.html" class="link">Contact Us</a>
+  </div>
+
+
+  <div class="container">
+    <div class="product">
+        <a href="shield.html"><img src="Images/shield.jpg" alt="Shield" class="product-image"></a>
+        <h2 class="title">NB IoT Shield</h2>
+        <div class="product-details">
+            <p class="product-description"><p1> Development choice made easy. </p1></p>
+            <p class="product-price">$50.99</p>
+            <button class="add-to-cart-btn" onclick="addToCart('NB IoT Shield', 50.99)">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product">
+      <a href="mbili.html"><img src="Images/mbili.jpg" alt="Mbili" class="product-image"></a>
+      <h2 class="title">SODAQ Mbili</h2>
+      <div class="product-details">
+          <p class="product-description"><p1> A multi-feature microcontroller board </p1></p>
+          <p class="product-price">$50.99</p>
+          <button class="add-to-cart-btn" onclick="addToCart('NB IoT Shield', 50.99)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="product">
+      <a href="explorer.html"><img src="Images/explorer.jpg" alt="Shield" class="product-image"></a>
+      <h2 class="title">NB IoT Shield</h2>
+      <div class="product-details">
+          <p class="product-description"><p1> High-end communication modules </p1></p>
+          <p class="product-price">$50.99</p>
+          <button class="add-to-cart-btn" onclick="addToCart('NB IoT Shield', 50.99)">Add to Cart</button>
+      </div>
+  </div>
+  <div class="product">
+    <a href="ff.html"><img src="Images/aff.jpg" alt="Mbili" class="product-image"></a>
+    <h2 class="title">SARA AFF/SFF</h2>
+    <div class="product-details">
+        <p class="product-description"><p1> A multi-feature microcontroller board </p1></p>
+        <p class="product-price">$50.99</p>
+        <button class="add-to-cart-btn" onclick="addToCart('NB IoT Shield', 50.99)">Add to Cart</button>
+    </div>
+</div>
+</div>
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          
+          <a href="index.html"> <img src="Images/slogo.jpg" style="height:100px;width:auto;"></a>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="products.html">Shop Now</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">News</li>
+          <li><a href="#">App design</a></li>
+          <li><a href="#">Web design</a></li>
+          
+        </ul>
+       
+        <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          
+          
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe to our newsletter</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe" ></li>
+        </ul>
+      </div>
+    </div>
+  
+  </footer>
+<script>
+  // Function to handle adding items to the cart
+  function addToCart(itemName, itemPrice) {
+      // You can implement your cart logic here
+      alert('Added to Cart: ' + itemName + ' - $' + itemPrice.toFixed(2));
+  }
+</script>
+
+
+</html>
+
