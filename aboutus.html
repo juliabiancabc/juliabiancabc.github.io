@@ -1,0 +1,291 @@
+
+ <!DOCTYPE html>
+ <html lang="en" title="About SODAQ">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <script src="table.js" defer></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="below.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+
+     <title>Who We Are</title>
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ background-color:#040c24;
+}
+
+main.table {
+    margin-bottom:50px;
+    position:relative;
+    margin:20px;
+
+    padding:5px;
+    width: auto;
+    height: 20vh;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem black;
+    overflow: hidden;
+    border-radius: .5rem; /* round edges of table*/
+
+    
+}
+
+.theader {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theader .input-group {
+    width: 35%;
+    height: 100%;
+    background-color: #fff5;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.theader .input-group:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.theader .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+    
+}
+
+.theader .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    height: calc(89% - 1.5rem); 
+    background-color: #fffb;
+
+    margin-left: .8rem;
+    margin-right: .8rem;
+    border-radius: .5rem;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+    
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    
+}
+
+td img {
+    width: 13rem;
+    height: 13rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    vertical-align: middle;
+    border-radius: .3rem;
+    
+
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+thead th {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.status {
+    padding: .5rem ;
+    text-align:center;
+}
+.header{
+    width:100vw;
+    
+}
+.content{
+    background-color:#140B5C;
+}
+
+</style>
+ </head>
+ 
+ <body>
+    <div class="header">
+        <div class="dropdown" data-dropdown>
+           <a href="index.html"><button class="link" data-dropdown-button>Home</button></a>
+          <div class="dropdown-menu information-grid">
+            <div>
+              <div class="dropdown-heading">Collaborations</div>
+              <div class="dropdown-links"> 
+                <a href="#" class="link" style="text-align:center;">Mongoto</a>
+                <a href="#" class="link" style="text-align:center;">4MOD</a>
+              </div>
+            </div>
+            <div>
+              <div class="dropdown-heading" style="text-align:center;">Projects</div>
+              <div class="dropdown-links">
+                <a href="#" class="link" style="text-align:center;">All</a>
+                <a href="#" class="link" style="text-align:center;">Latest</a>
+                <a href="#" class="link" style="text-align:center;">Popular</a>
+              </div>
+            </div>
+           
+            
+          </div>
+        </div>
+        <a href="#" class="link">About Us</a>
+        <a href="products.html" class="link">Our Products</a>
+        <a href="contactus.html" class="link">Contact Us</a>
+      </div>
+      <br>
+     <main class="table">
+         
+         <section class="table__body">
+             <table>
+                 <thead>
+                     <tr>
+                         
+                         <th> The Company </th>
+                        <th>Who They Are</th>
+                         <th> What They Do </th>
+                         
+                         
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         
+                         <td> <img src="Images/ceo.jpg" alt=""></td>
+                         <td> Founder,<br> Robbert Woltering </td>
+                         <td>With three decades of experience in sales, Robbert has been leaving his 
+                            mark at SODAQ since he joined the company in 2020. His passion for innovation 
+                            and transformation helped SODAQ adopt a new direction focusing on using advanced technologies </p>
+                     </tr>
+                     <tr >
+                         
+                        <td> <img src="Images/cf.jpg" alt=""></td>
+                        <td> Co-Founder, <br>Ollie Smeenk </td>
+                        <td>Data-driven, with a background in international business administration and computer science. In the past 10 years he has built 2 companies in IoT hardware and cloud software. He has experience closing €500k+ contracts with large B2B clients in every continent. </td>
+                        
+                    </tr>
+                    <tr>
+                         
+                        <td> <img src="Images/jan.jpg" alt=""></td>
+                        <td> Co-Founder,<br>Jan Willem Smeenk </td>
+                        <td>Bringing the first internet connection to Tanzania, his innovative spirit didn’t stop there: and he began deploying solar-powered weather stations across rural Africa, creating one of the world’s first IoT solutions.</td>
+                        
+                    </tr>     
+                 </tbody>
+             </table>
+         </section>
+     </main>
+     <br>
+  
+     <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              
+              <a href="index.html"> <img src="Images/slogo.jpg" style="height:100px;width:auto;"></a>
+            </div>
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About us</a></li>
+              <li><a href="products.html">Shop Now</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">News</li>
+              <li><a href="#">App design</a></li>
+              <li><a href="#">Web design</a></li>
+              
+            </ul>
+           
+            <ul class="box">
+              <li class="link_name">Courses</li>
+              <li><a href="#">HTML & CSS</a></li>
+              
+              
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Subscribe to our newsletter</li>
+              <li><input type="text" placeholder="Enter your email"></li>
+              <li><input type="button" value="Subscribe"></li>
+            </ul>
+          </div>
+        </div>
+      
+      </footer>
+  
+  
+ </body>
+
+ </html>

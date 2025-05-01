@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="stylesheet" href="below.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+  <script src="script.js" defer></script>
+  <script src="nav.js" defer></script>
+  <title>SODAQ Home</title>
+  <style>
+    *, *::before, *::after /* universal selector to apply to all*/
+    { 
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0;
+  background-color: #040c24; 
+  overflow-x:hidden;
+  z-index:1;
+  box-sizing:border-box;
+}
+
+.carousel {
+  width: 100vw; /*full viewport width to stretch to both sides of screen*/
+  height: 40vh; /*viewport height*/
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  
+  text-shadow: 4px 4px 2px #0d00ff;
+}
+
+
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+/*overlapping text*/
+
+.para-overlay {
+  position:absolute;
+  top: 50%; /*centralise*/
+  left: 50%; /*centralise*/
+  transform: translate(-50%, -50%);
+  color: white; /* Set the text color */
+  font-size: 100%; /* Adjust the font size as needed */
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+/**/
+.containerb {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      flex: 1; /* This allows the text to take up remaining space */
+      margin-right: 20px; /* Adjust the margin as needed */
+      text-align: right;
+      color:white;
+    }
+    .text >p{
+      font-size:90%;
+      color:white;
+    }
+    .image {
+      max-width: 100%; /* Ensure the image doesn't exceed its container */
+           
+    }
+
+    .textle {
+      flex: 1; /* This allows the text to take up remaining space */
+      margin-left: 20px; /* Adjust the margin as needed */
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="dropdown" data-dropdown>
+       <button class="link" data-dropdown-button>Home</button>
+      <div class="dropdown-menu information-grid">
+        <div>
+          <div class="dropdown-heading">Collaborations</div>
+          <div class="dropdown-links"> 
+            <a href="#" class="link" style="text-align:center;">Mongoto</a>
+            <a href="#" class="link" style="text-align:center;">4MOD</a>
+          </div>
+        </div>
+        <div>
+          <div class="dropdown-heading" style="text-align:center;">Projects</div>
+          <div class="dropdown-links">
+            <a href="https://www.kickstarter.com/projects/olliesmeenk/sodaq-air-the-portable-air-quality-monitor" class="link" style="text-align:center;">Air</a>
+            
+            </div>
+        </div>
+       
+        
+      </div>
+    </div>
+    <a href="aboutus.html" class="link">About Us</a>
+    <a href="products.html" class="link">Our Products</a>
+    <a href="contactus.html" class="link">Contact Us</a>
+  </div>
+  <section aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+            <img src="Images/gif1.gif" alt="GIF 1">
+            <div class="para-overlay"><b>Founded in 2012,</b> we specialize in solar-powered IoT hardware for enterprise-level deployments.</div>
+          </li>
+          <li class="slide">
+            <img src="Images/gif2.gif" alt="GIF 2">
+            <div class="para-overlay"><b>Our mission</b> is to tackle global supply chain challenges head-on.</div>
+            
+          </li>
+          <li class="slide">
+            <img src="Images/gif3.gif" alt="GIF 3">
+            <div class="para-overlay"><b>With over a decade of experience</b></With> in low-power technology and renewable energy, we deliver impactful tracking solutions for intricate supply chain needs.</div>
+          </li>
+          
+      </ul>
+    </div>
+  </section>
+
+  <div class="containerb">
+    <div class="text">
+      <h1>Mongoto</h1>
+      <p>"We are excited to announce this cooperation with SODAQ," says Itamar Kunik, <br>
+        CEO at monogoto. 
+        "Nowadays, IoT solutions are built by developers rather <br>
+        than telecom engineers. 
+        As a global IoT connectivity leader, we<br>
+         must continue our efforts to simplify,<br>
+         innovate and lower the barrier <br>
+         to our clients,<br>
+          enabling the access <br>to advanced
+          cellular network features
+           via simple APIs."</p>
+    </div>
+    <br>
+    
+    <div class="image">
+      <a href="https://www.prnewswire.com/il/news-releases/sodaq-and-monogoto-collaboration-enable-global-lte-m-connectivity-with-psm-and-edrx-support-for-an-arduino-based-developer-board-301089051.html" 
+      class="link"> <img src="Images/mon.jpg" alt="Your Image" style="height:25vh;"></a>
+    </div>
+  </div>
+  </div>
+ 
+  <div class="containerb">
+    <div class="text">
+      <h1>4MOD</h1>
+      <p>
+        This is the first collaboration between SODAQ and 4MOD. <br>
+        Being both leaders within their respective fields, the <br>
+        collaboration ensures quality assurance of both software and hardware. <br>
+        SODAQ is an industry leader in IoT low-power sensing and tracking solutions<br>
+         and a pioneer in the field of energy harvesting. 4MOD provides expertise on <br>
+         the design of the products and quality assurance throughout the manufacturing <br>
+         process, varying from resource selection to Design2Cost. <br>
+         4MOD will be responsible for the industrialization <br>
+         and mass manufacturing of the TRACK line.</p>
+    </div>
+    <br>
+    
+    <div class="image">
+      <a href="https://www.linkedin.com/company/4mod-technology/?trk=public_profile_experience-item_profile-section-card_image-click&originalSubdomain=re"
+      class="link"> <img src="Images/home.gif" alt="Your Image" style="height:25vh;"></a>
+    </div>
+  </div>
+  </div>
+ 
+
+
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            
+            <a href="index.html"> <img src="Images/slogo.jpg" style="height:100px;width:auto;"></a>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Company</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="products.html">Shop Now</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">News</li>
+            <li><a href="#">App design</a></li>
+            <li><a href="#">Web design</a></li>
+            
+          </ul>
+         
+          <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            
+            
+          </ul>
+          <ul class="box input-box">
+            <li class="link_name">Subscribe to our newsletter</li>
+            <li><input type="text" placeholder="Enter your email"></li>
+            <li><input type="button" value="Subscribe"></li>
+          </ul>
+        </div>
+      </div>
+    
+    </footer>
+
+</body>
+</html>
